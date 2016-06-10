@@ -39,10 +39,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewWillAppear(animated: Bool) {
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
         
-        //subscribeToKeyboardNotifications()
         
         
     }
+    
     
     override func viewWillDisappear(animated: Bool) {
         unsubscribeFromKeyboardNotifications()
@@ -189,6 +189,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
         presentViewController(controller, animated: true, completion: nil)
     }
+    
+    @IBAction func cancelMeme(sender: UIBarButtonItem) {
+        imagePickerView.image = nil
+        topText.text = "TOP"
+        bottomText.text = "BOTTOM"
+        shareButton.enabled = false
+        
+    }
+    
     
     
 }

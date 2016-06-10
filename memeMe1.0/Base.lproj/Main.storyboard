@@ -19,15 +19,15 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OPO-6F-aSz">
                                 <rect key="frame" x="180" y="180" width="240" height="240"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="ZMZ-vE-ekY">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="ZMZ-vE-ekY">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5oV-Y8-5x9">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="BGw-6s-sz6"/>
                                     <barButtonItem systemItem="camera" id="j6S-B5-OEh">
@@ -46,7 +46,9 @@
                             </toolbar>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NZd-Ms-XHN">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem id="hI6-mv-v2a">
                                         <barButtonItem key="leftBarButtonItem" systemItem="action" id="XTW-qH-yhG">
@@ -54,20 +56,27 @@
                                                 <action selector="shareMeme:" destination="BYZ-38-t0r" id="2OE-16-YfX"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="7NM-J8-WZc">
+                                            <connections>
+                                                <action selector="cancelMeme:" destination="BYZ-38-t0r" id="ySa-xA-fuU"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="W63-4O-cVf">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="W63-4O-cVf">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="5oV-Y8-5x9" secondAttribute="trailing" id="1La-Cj-OeN"/>
+                            <constraint firstItem="ZMZ-vE-ekY" firstAttribute="width" secondItem="W63-4O-cVf" secondAttribute="width" id="LmR-aM-zSQ"/>
                             <constraint firstItem="OPO-6F-aSz" firstAttribute="top" secondItem="W63-4O-cVf" secondAttribute="bottom" constant="-100" id="M8f-Rt-LQv"/>
                             <constraint firstItem="ZMZ-vE-ekY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NZO-7F-w4H"/>
+                            <constraint firstItem="ZMZ-vE-ekY" firstAttribute="height" secondItem="W63-4O-cVf" secondAttribute="height" id="YkN-Ey-5RF"/>
                             <constraint firstItem="NZd-Ms-XHN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cXi-lK-xhK"/>
                             <constraint firstItem="NZd-Ms-XHN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="dpj-kK-el0"/>
                             <constraint firstItem="OPO-6F-aSz" firstAttribute="top" secondItem="NZd-Ms-XHN" secondAttribute="bottom" id="hWt-nL-R6K"/>
@@ -93,7 +102,9 @@
                                 <exclude reference="ypB-uQ-M0Q"/>
                                 <exclude reference="zCM-PQ-21v"/>
                                 <exclude reference="rR4-kS-dyD"/>
+                                <exclude reference="LmR-aM-zSQ"/>
                                 <exclude reference="NZO-7F-w4H"/>
+                                <exclude reference="YkN-Ey-5RF"/>
                                 <exclude reference="lgQ-5X-Jxh"/>
                                 <exclude reference="1La-Cj-OeN"/>
                                 <exclude reference="qGj-Hm-mKF"/>
@@ -114,7 +125,9 @@
                                 <include reference="ypB-uQ-M0Q"/>
                                 <include reference="zCM-PQ-21v"/>
                                 <include reference="rR4-kS-dyD"/>
+                                <include reference="LmR-aM-zSQ"/>
                                 <include reference="NZO-7F-w4H"/>
+                                <include reference="YkN-Ey-5RF"/>
                                 <include reference="lgQ-5X-Jxh"/>
                                 <include reference="1La-Cj-OeN"/>
                                 <include reference="qGj-Hm-mKF"/>
