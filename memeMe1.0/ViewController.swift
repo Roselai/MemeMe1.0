@@ -18,7 +18,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var bottomToolbar: UIToolbar!
     @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var navBar: UINavigationBar!
-    @IBOutlet weak var cropImage: UIBarButtonItem!
+ 
     
     
     //MARK: VARIABLES
@@ -36,7 +36,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         bottomText.text = "BOTTOM"
         
         shareButton.enabled = false
-        cropImage.enabled = false
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -54,8 +53,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     // MARK: UIIMAGEPICKERCONTROLLER
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        cropImage.enabled = true
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             imagePickerView.image = image
         }
         dismissViewControllerAnimated(true, completion: nil)
@@ -201,10 +199,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         bottomText.text = "BOTTOM"
         shareButton.enabled = false
         
-    }
-    
-    @IBAction func allowEditing(sender: UIBarButtonItem) {
-
     }
     
     

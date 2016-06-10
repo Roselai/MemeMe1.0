@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -29,6 +28,9 @@
                             </textField>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5oV-Y8-5x9">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="7k8-eW-phZ"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="BGw-6s-sz6"/>
                                     <barButtonItem systemItem="camera" id="j6S-B5-OEh">
@@ -44,26 +46,32 @@
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="XcS-Qy-5K3"/>
                                 </items>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7k8-eW-phZ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="7k8-eW-phZ"/>
+                                    </mask>
+                                </variation>
                             </toolbar>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NZd-Ms-XHN">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="tTJ-eY-tsb"/>
+                                </constraints>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>
                                 <items>
                                     <navigationItem id="hI6-mv-v2a">
-                                        <leftBarButtonItems>
-                                            <barButtonItem systemItem="action" id="XTW-qH-yhG">
-                                                <connections>
-                                                    <action selector="shareMeme:" destination="BYZ-38-t0r" id="2OE-16-YfX"/>
-                                                </connections>
-                                            </barButtonItem>
-                                            <barButtonItem title="Crop" id="Igu-YT-p84">
-                                                <connections>
-                                                    <action selector="allowEditing:" destination="BYZ-38-t0r" id="sC8-Ek-dHc"/>
-                                                </connections>
-                                            </barButtonItem>
-                                        </leftBarButtonItems>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="XTW-qH-yhG">
+                                            <connections>
+                                                <action selector="shareMeme:" destination="BYZ-38-t0r" id="2OE-16-YfX"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="7NM-J8-WZc">
                                             <connections>
                                                 <action selector="cancelMeme:" destination="BYZ-38-t0r" id="ySa-xA-fuU"/>
@@ -71,6 +79,16 @@
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="tTJ-eY-tsb"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="tTJ-eY-tsb"/>
+                                    </mask>
+                                </variation>
                             </navigationBar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="W63-4O-cVf">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
@@ -80,21 +98,21 @@
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="5oV-Y8-5x9" secondAttribute="trailing" id="1La-Cj-OeN"/>
+                            <constraint firstItem="OPO-6F-aSz" firstAttribute="bottom" secondItem="5oV-Y8-5x9" secondAttribute="top" id="GzQ-wc-QTc"/>
                             <constraint firstItem="ZMZ-vE-ekY" firstAttribute="width" secondItem="W63-4O-cVf" secondAttribute="width" id="LmR-aM-zSQ"/>
                             <constraint firstItem="OPO-6F-aSz" firstAttribute="top" secondItem="W63-4O-cVf" secondAttribute="bottom" constant="-100" id="M8f-Rt-LQv"/>
                             <constraint firstItem="ZMZ-vE-ekY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NZO-7F-w4H"/>
                             <constraint firstItem="ZMZ-vE-ekY" firstAttribute="height" secondItem="W63-4O-cVf" secondAttribute="height" id="YkN-Ey-5RF"/>
                             <constraint firstItem="NZd-Ms-XHN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cXi-lK-xhK"/>
+                            <constraint firstAttribute="trailing" secondItem="5oV-Y8-5x9" secondAttribute="trailing" id="d3G-9N-Gfx"/>
                             <constraint firstItem="NZd-Ms-XHN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="dpj-kK-el0"/>
                             <constraint firstItem="OPO-6F-aSz" firstAttribute="top" secondItem="NZd-Ms-XHN" secondAttribute="bottom" id="hWt-nL-R6K"/>
                             <constraint firstItem="ZMZ-vE-ekY" firstAttribute="top" secondItem="OPO-6F-aSz" secondAttribute="bottom" constant="-100" id="lgQ-5X-Jxh"/>
                             <constraint firstAttribute="trailing" secondItem="NZd-Ms-XHN" secondAttribute="trailing" id="paA-QM-35O"/>
-                            <constraint firstAttribute="bottom" secondItem="5oV-Y8-5x9" secondAttribute="bottom" id="qGj-Hm-mKF"/>
                             <constraint firstItem="W63-4O-cVf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rR4-kS-dyD"/>
-                            <constraint firstItem="5oV-Y8-5x9" firstAttribute="top" secondItem="OPO-6F-aSz" secondAttribute="bottom" id="rVQ-jF-4hf"/>
-                            <constraint firstItem="5oV-Y8-5x9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vc3-qy-4nK"/>
+                            <constraint firstAttribute="bottom" secondItem="5oV-Y8-5x9" secondAttribute="bottom" id="s0w-48-qvq"/>
                             <constraint firstAttribute="trailing" secondItem="OPO-6F-aSz" secondAttribute="trailing" id="ypB-uQ-M0Q"/>
+                            <constraint firstItem="5oV-Y8-5x9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="z7T-c8-dBA"/>
                             <constraint firstItem="OPO-6F-aSz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zCM-PQ-21v"/>
                         </constraints>
                         <variation key="default">
@@ -105,19 +123,19 @@
                                 <exclude reference="cXi-lK-xhK"/>
                                 <exclude reference="dpj-kK-el0"/>
                                 <exclude reference="paA-QM-35O"/>
-                                <exclude reference="1La-Cj-OeN"/>
-                                <exclude reference="qGj-Hm-mKF"/>
-                                <exclude reference="rVQ-jF-4hf"/>
-                                <exclude reference="vc3-qy-4nK"/>
+                                <exclude reference="GzQ-wc-QTc"/>
+                                <exclude reference="M8f-Rt-LQv"/>
+                                <exclude reference="hWt-nL-R6K"/>
+                                <exclude reference="ypB-uQ-M0Q"/>
+                                <exclude reference="zCM-PQ-21v"/>
                                 <exclude reference="rR4-kS-dyD"/>
                                 <exclude reference="LmR-aM-zSQ"/>
                                 <exclude reference="NZO-7F-w4H"/>
                                 <exclude reference="YkN-Ey-5RF"/>
                                 <exclude reference="lgQ-5X-Jxh"/>
-                                <exclude reference="M8f-Rt-LQv"/>
-                                <exclude reference="hWt-nL-R6K"/>
-                                <exclude reference="ypB-uQ-M0Q"/>
-                                <exclude reference="zCM-PQ-21v"/>
+                                <exclude reference="d3G-9N-Gfx"/>
+                                <exclude reference="s0w-48-qvq"/>
+                                <exclude reference="z7T-c8-dBA"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -128,19 +146,19 @@
                                 <include reference="cXi-lK-xhK"/>
                                 <include reference="dpj-kK-el0"/>
                                 <include reference="paA-QM-35O"/>
-                                <include reference="1La-Cj-OeN"/>
-                                <include reference="qGj-Hm-mKF"/>
-                                <include reference="rVQ-jF-4hf"/>
-                                <include reference="vc3-qy-4nK"/>
+                                <include reference="GzQ-wc-QTc"/>
+                                <include reference="M8f-Rt-LQv"/>
+                                <include reference="hWt-nL-R6K"/>
+                                <include reference="ypB-uQ-M0Q"/>
+                                <include reference="zCM-PQ-21v"/>
                                 <include reference="rR4-kS-dyD"/>
                                 <include reference="LmR-aM-zSQ"/>
                                 <include reference="NZO-7F-w4H"/>
                                 <include reference="YkN-Ey-5RF"/>
                                 <include reference="lgQ-5X-Jxh"/>
-                                <include reference="M8f-Rt-LQv"/>
-                                <include reference="hWt-nL-R6K"/>
-                                <include reference="ypB-uQ-M0Q"/>
-                                <include reference="zCM-PQ-21v"/>
+                                <include reference="d3G-9N-Gfx"/>
+                                <include reference="s0w-48-qvq"/>
+                                <include reference="z7T-c8-dBA"/>
                             </mask>
                         </variation>
                     </view>
@@ -148,7 +166,6 @@
                         <outlet property="bottomText" destination="ZMZ-vE-ekY" id="yVN-Qh-cQj"/>
                         <outlet property="bottomToolbar" destination="5oV-Y8-5x9" id="lH3-FQ-wb0"/>
                         <outlet property="cameraButton" destination="j6S-B5-OEh" id="GuZ-M2-ohd"/>
-                        <outlet property="cropImage" destination="Igu-YT-p84" id="K18-ni-KfX"/>
                         <outlet property="imagePickerView" destination="OPO-6F-aSz" id="Q5i-Ab-hhH"/>
                         <outlet property="navBar" destination="NZd-Ms-XHN" id="NPs-CG-Siz"/>
                         <outlet property="shareButton" destination="XTW-qH-yhG" id="how-Lg-0Rh"/>
