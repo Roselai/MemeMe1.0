@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A74F6E41D07278300951470 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A74F6E31D07278300951470 /* Meme.swift */; };
 		6AC36D901CE3E4B50080D915 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC36D8F1CE3E4B50080D915 /* AppDelegate.swift */; };
 		6AC36D921CE3E4B50080D915 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC36D911CE3E4B50080D915 /* ViewController.swift */; };
 		6AC36D951CE3E4B50080D915 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AC36D931CE3E4B50080D915 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A74F6E31D07278300951470 /* Meme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 		6AC36D8C1CE3E4B50080D915 /* memeMe1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memeMe1.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AC36D8F1CE3E4B50080D915 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AC36D911CE3E4B50080D915 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				6AC36D8F1CE3E4B50080D915 /* AppDelegate.swift */,
 				6AC36D911CE3E4B50080D915 /* ViewController.swift */,
+				6A74F6E31D07278300951470 /* Meme.swift */,
 				6AC36D931CE3E4B50080D915 /* Main.storyboard */,
 				6AC36D961CE3E4B50080D915 /* Assets.xcassets */,
 				6AC36D981CE3E4B50080D915 /* LaunchScreen.storyboard */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A74F6E41D07278300951470 /* Meme.swift in Sources */,
 				6AC36D921CE3E4B50080D915 /* ViewController.swift in Sources */,
 				6AC36D901CE3E4B50080D915 /* AppDelegate.swift in Sources */,
 			);
@@ -286,6 +290,7 @@
 				6AC36DA01CE3E4B50080D915 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
