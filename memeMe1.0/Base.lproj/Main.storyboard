@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -51,11 +52,18 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem id="hI6-mv-v2a">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="XTW-qH-yhG">
-                                            <connections>
-                                                <action selector="shareMeme:" destination="BYZ-38-t0r" id="2OE-16-YfX"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <leftBarButtonItems>
+                                            <barButtonItem systemItem="action" id="XTW-qH-yhG">
+                                                <connections>
+                                                    <action selector="shareMeme:" destination="BYZ-38-t0r" id="2OE-16-YfX"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem title="Crop" id="Igu-YT-p84">
+                                                <connections>
+                                                    <action selector="allowEditing:" destination="BYZ-38-t0r" id="sC8-Ek-dHc"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </leftBarButtonItems>
                                         <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="7NM-J8-WZc">
                                             <connections>
                                                 <action selector="cancelMeme:" destination="BYZ-38-t0r" id="ySa-xA-fuU"/>
@@ -97,19 +105,19 @@
                                 <exclude reference="cXi-lK-xhK"/>
                                 <exclude reference="dpj-kK-el0"/>
                                 <exclude reference="paA-QM-35O"/>
-                                <exclude reference="M8f-Rt-LQv"/>
-                                <exclude reference="hWt-nL-R6K"/>
-                                <exclude reference="ypB-uQ-M0Q"/>
-                                <exclude reference="zCM-PQ-21v"/>
+                                <exclude reference="1La-Cj-OeN"/>
+                                <exclude reference="qGj-Hm-mKF"/>
+                                <exclude reference="rVQ-jF-4hf"/>
+                                <exclude reference="vc3-qy-4nK"/>
                                 <exclude reference="rR4-kS-dyD"/>
                                 <exclude reference="LmR-aM-zSQ"/>
                                 <exclude reference="NZO-7F-w4H"/>
                                 <exclude reference="YkN-Ey-5RF"/>
                                 <exclude reference="lgQ-5X-Jxh"/>
-                                <exclude reference="1La-Cj-OeN"/>
-                                <exclude reference="qGj-Hm-mKF"/>
-                                <exclude reference="rVQ-jF-4hf"/>
-                                <exclude reference="vc3-qy-4nK"/>
+                                <exclude reference="M8f-Rt-LQv"/>
+                                <exclude reference="hWt-nL-R6K"/>
+                                <exclude reference="ypB-uQ-M0Q"/>
+                                <exclude reference="zCM-PQ-21v"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -120,19 +128,19 @@
                                 <include reference="cXi-lK-xhK"/>
                                 <include reference="dpj-kK-el0"/>
                                 <include reference="paA-QM-35O"/>
-                                <include reference="M8f-Rt-LQv"/>
-                                <include reference="hWt-nL-R6K"/>
-                                <include reference="ypB-uQ-M0Q"/>
-                                <include reference="zCM-PQ-21v"/>
+                                <include reference="1La-Cj-OeN"/>
+                                <include reference="qGj-Hm-mKF"/>
+                                <include reference="rVQ-jF-4hf"/>
+                                <include reference="vc3-qy-4nK"/>
                                 <include reference="rR4-kS-dyD"/>
                                 <include reference="LmR-aM-zSQ"/>
                                 <include reference="NZO-7F-w4H"/>
                                 <include reference="YkN-Ey-5RF"/>
                                 <include reference="lgQ-5X-Jxh"/>
-                                <include reference="1La-Cj-OeN"/>
-                                <include reference="qGj-Hm-mKF"/>
-                                <include reference="rVQ-jF-4hf"/>
-                                <include reference="vc3-qy-4nK"/>
+                                <include reference="M8f-Rt-LQv"/>
+                                <include reference="hWt-nL-R6K"/>
+                                <include reference="ypB-uQ-M0Q"/>
+                                <include reference="zCM-PQ-21v"/>
                             </mask>
                         </variation>
                     </view>
@@ -140,6 +148,7 @@
                         <outlet property="bottomText" destination="ZMZ-vE-ekY" id="yVN-Qh-cQj"/>
                         <outlet property="bottomToolbar" destination="5oV-Y8-5x9" id="lH3-FQ-wb0"/>
                         <outlet property="cameraButton" destination="j6S-B5-OEh" id="GuZ-M2-ohd"/>
+                        <outlet property="cropImage" destination="Igu-YT-p84" id="K18-ni-KfX"/>
                         <outlet property="imagePickerView" destination="OPO-6F-aSz" id="Q5i-Ab-hhH"/>
                         <outlet property="navBar" destination="NZd-Ms-XHN" id="NPs-CG-Siz"/>
                         <outlet property="shareButton" destination="XTW-qH-yhG" id="how-Lg-0Rh"/>

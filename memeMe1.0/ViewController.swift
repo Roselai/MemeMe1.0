@@ -18,10 +18,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var bottomToolbar: UIToolbar!
     @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var navBar: UINavigationBar!
+    @IBOutlet weak var cropImage: UIBarButtonItem!
+    
     
     //MARK: VARIABLES
     var keyboardHidden = true
     var meme: Meme!
+    
     
     //MARK: VIEW FUNCTIONS
     override func viewDidLoad() {
@@ -33,7 +36,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         bottomText.text = "BOTTOM"
         
         shareButton.enabled = false
-        
+        cropImage.enabled = false
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -51,6 +54,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     // MARK: UIIMAGEPICKERCONTROLLER
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        cropImage.enabled = true
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imagePickerView.image = image
         }
@@ -68,7 +72,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let memeTextAttributes = [
             NSStrokeColorAttributeName : UIColor.blackColor(),
             NSForegroundColorAttributeName : UIColor.whiteColor(),
-            NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBlack", size: 35)!,
+            NSFontAttributeName : UIFont(name: "impact", size: 35)!,
             NSStrokeWidthAttributeName : -3.0
         ]
         textField.delegate = self
@@ -149,7 +153,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func save() {
         
         self.meme = Meme(topText: topText.text!, bottomText: bottomText.text!, image: imagePickerView.image, memeImage: generateMemedImage())
-
+        
         
     }
     
@@ -163,6 +167,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = source
+        imagePicker.allowsEditing = true
         presentViewController(imagePicker, animated: true, completion: nil)
     }
     
@@ -198,6 +203,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
+    @IBAction func allowEditing(sender: UIBarButtonItem) {
+
+    }
     
     
 }
