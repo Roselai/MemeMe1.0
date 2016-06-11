@@ -123,19 +123,19 @@
                                 <exclude reference="cXi-lK-xhK"/>
                                 <exclude reference="dpj-kK-el0"/>
                                 <exclude reference="paA-QM-35O"/>
-                                <exclude reference="GzQ-wc-QTc"/>
-                                <exclude reference="M8f-Rt-LQv"/>
-                                <exclude reference="hWt-nL-R6K"/>
-                                <exclude reference="ypB-uQ-M0Q"/>
-                                <exclude reference="zCM-PQ-21v"/>
+                                <exclude reference="d3G-9N-Gfx"/>
+                                <exclude reference="s0w-48-qvq"/>
+                                <exclude reference="z7T-c8-dBA"/>
                                 <exclude reference="rR4-kS-dyD"/>
                                 <exclude reference="LmR-aM-zSQ"/>
                                 <exclude reference="NZO-7F-w4H"/>
                                 <exclude reference="YkN-Ey-5RF"/>
                                 <exclude reference="lgQ-5X-Jxh"/>
-                                <exclude reference="d3G-9N-Gfx"/>
-                                <exclude reference="s0w-48-qvq"/>
-                                <exclude reference="z7T-c8-dBA"/>
+                                <exclude reference="GzQ-wc-QTc"/>
+                                <exclude reference="M8f-Rt-LQv"/>
+                                <exclude reference="hWt-nL-R6K"/>
+                                <exclude reference="ypB-uQ-M0Q"/>
+                                <exclude reference="zCM-PQ-21v"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -146,19 +146,19 @@
                                 <include reference="cXi-lK-xhK"/>
                                 <include reference="dpj-kK-el0"/>
                                 <include reference="paA-QM-35O"/>
-                                <include reference="GzQ-wc-QTc"/>
-                                <include reference="M8f-Rt-LQv"/>
-                                <include reference="hWt-nL-R6K"/>
-                                <include reference="ypB-uQ-M0Q"/>
-                                <include reference="zCM-PQ-21v"/>
+                                <include reference="d3G-9N-Gfx"/>
+                                <include reference="s0w-48-qvq"/>
+                                <include reference="z7T-c8-dBA"/>
                                 <include reference="rR4-kS-dyD"/>
                                 <include reference="LmR-aM-zSQ"/>
                                 <include reference="NZO-7F-w4H"/>
                                 <include reference="YkN-Ey-5RF"/>
                                 <include reference="lgQ-5X-Jxh"/>
-                                <include reference="d3G-9N-Gfx"/>
-                                <include reference="s0w-48-qvq"/>
-                                <include reference="z7T-c8-dBA"/>
+                                <include reference="GzQ-wc-QTc"/>
+                                <include reference="M8f-Rt-LQv"/>
+                                <include reference="hWt-nL-R6K"/>
+                                <include reference="ypB-uQ-M0Q"/>
+                                <include reference="zCM-PQ-21v"/>
                             </mask>
                         </variation>
                     </view>

@@ -41,9 +41,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewWillAppear(animated: Bool) {
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
         
-        
-        
-    }
+        }
     
     
     override func viewWillDisappear(animated: Bool) {
@@ -53,7 +51,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     // MARK: UIIMAGEPICKERCONTROLLER
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            imagePickerView.contentMode = .ScaleAspectFit
             imagePickerView.image = image
         }
         dismissViewControllerAnimated(true, completion: nil)
@@ -165,7 +164,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = source
-        imagePicker.allowsEditing = true
         presentViewController(imagePicker, animated: true, completion: nil)
     }
     
@@ -186,8 +184,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             (s: String?, ok: Bool, items: [AnyObject]?, err:NSError?) -> Void in
             if ok{
                 self.save()
-            }else{
-                controller.dismissViewControllerAnimated(true, completion: nil )
             }
         }
         presentViewController(controller, animated: true, completion: nil)
